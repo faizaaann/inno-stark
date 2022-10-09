@@ -5,13 +5,13 @@ In the start, you can see that the store is empty. You can start adding products
 - All the fields are validated while adding the product. 
 - Once you add the product it will be persisted and you can search it. 
 - If no product is searched, it shows `No product Found` message.
-- You can print the list of the products by pressing ctrl+P
+- You can print the list of the products by pressing `ctrl+P`.
 
 ## Project Dependencies
-For the styling, tailwind Css is being used in the project.
-For global state management, RTK is being used.
-For forms formik is used.
-For validation, Yup is used
+- For the styling, tailwind Css is being used in the project.
+- For global state management, RTK is being used.
+- For forms formik is used.
+- For validation, Yup is used
 
 
 ## Available Scripts
