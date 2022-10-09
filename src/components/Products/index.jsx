@@ -6,10 +6,14 @@ import InputContainer from '../InputContainer';
 const Products = () => {
   const products = useSelector((state) => state.products.products);
   const [filteredProducts, setFilteredProducts] = useState(products);
+  const [isEmpty, setIsEmpty] = useState(true);
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    setFilteredProducts(products);
+    if (products.length) {
+      setFilteredProducts(products);
+      setIsEmpty(false);
+    }
   }, [products]);
 
   useEffect(() => {
@@ -45,8 +49,7 @@ const Products = () => {
               <div
                 className='max-w-sm rounded overflow-hidden shadow-sm bg-transparent border-2 border-gray-200 hover:shadow-lg cursor-pointer'
                 style={{ borderWidth: 1 }}
-                key={index}
-              >
+                key={index}>
                 <img
                   src='https://cdn.shopify.com/s/files/1/0070/7032/files/DIY_Product_Photography.jpg?v=1527090823'
                   alt='product'
@@ -65,8 +68,12 @@ const Products = () => {
           )}
         </div>
       ) : (
-        <div>No Product Found</div>
+        <div>
+          No Product {isEmpty && <span>Added</span>}{' '}
+          {!isEmpty && <span>Found</span>}
+        </div>
       )}
+      {/* {isEmpty && <div>No Product Added</div>} */}
     </>
   );
 };

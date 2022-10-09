@@ -1,8 +1,10 @@
 # Introduction
 
 In the start, you can see that the store is empty. You can start adding products. 
+- Initially it shows `No product Added` message.
 - All the fields are validated while adding the product. 
 - Once you add the product it will be persisted and you can search it. 
+- If no product is searched, it shows `No product Found` message.
 - You can print the list of the products by pressing ctrl+P
 
 ## Project Dependencies
